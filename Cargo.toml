@@ -1,0 +1,22 @@
+[package]
+name = "kafkaconsumer"
+version = "0.1.0"
+authors = ["Caleb McCarthy <caleb.andrew.mccarthy@ibm.com>"]
+edition = "2018"
+
+[dependencies]
+serde = "1.0"
+serde_derive = "1.0"
+serde_json = "1.0"
+reqwest = "0.9.9"
+base64 = "0.10.1"
+lazy_static = "1.1.0"
+rdkafka-sys = "1.0.0"
+futures = "0.1"
+rustoculuslogger = { git = "https://github.ibm.com/Caleb-Andrew-McCarthy/rustoculuslogger", branch = "master" }
+log = { version = "0.4", features = ["std", "serde"] }
+
+
+[dependencies.rdkafka]
+version = "~0.21"
+features = ["ssl", "sasl"]
