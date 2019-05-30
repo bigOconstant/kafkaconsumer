@@ -167,6 +167,12 @@ pub fn consume_kafka_messages(brokers: String, group_id: String, topics: String,
 mod tests {
     #[test]
     fn it_works() {
+        rustoculuslogger::LogObject::new()
+                            .msg("Committing offsets".to_string())
+                            .op("ConsumerContext".to_string())
+                            .lvl("Info".to_string())
+                            //.optionaldata(result.to_string())
+                            .print();
         assert_eq!(2 + 2, 4);
     }
 }
